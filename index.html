@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shatha Alawneh - Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a; /* كحلي غامق جداً قريب للأسود */
+            --card-bg: #1e293b; /* لون بطاقات مختلف */
+            --accent-color: #8b5cf6; /* بنفسجي فيبرانت */
+            --accent-glow: #7c3aed;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        /* ترويسة الموقع */
+        .main-header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        .main-header h1 { font-size: 2.5rem; letter-spacing: 2px; color: var(--text-main); }
+        .main-header span { color: var(--accent-color); }
+
+        /* صندوق معلومات الطالبة - شكل جديد */
+        .student-profile {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .profile-item b { color: var(--accent-color); display: block; font-size: 0.8rem; text-transform: uppercase; }
+        .profile-item p { font-size: 1.1rem; margin-top: 5px; }
+
+        /* شبكة الواجبات */
+        .hw-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .hw-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hw-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .card-tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            position: absolute;
+            top: 0; right: 0;
+            border-bottom-left-radius: 12px;
+        }
+
+        .card-content { padding: 30px 20px; }
+        .card-content h3 { color: var(--accent-color); margin-bottom: 10px; }
+        .card-content p { color: var(--text-dim); font-size: 0.9rem; line-height: 1.5; }
+
+        .card-footer {
+            background: rgba(0,0,0,0.2);
+            padding: 15px 20px;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .arrow { color: var(--accent-color); font-size: 1.2rem; }
+
+        .footer-note { text-align: center; margin-top: 60px; color: var(--text-dim); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="main-header">
+        <h1>SHATHA <span>ALAWNEH</span></h1>
+        <p style="color: var(--text-dim); margin-top: 10px;">Full-Stack Development Portfolio</p>
+    </header>
+
+    <section class="student-profile">
+        <div class="profile-item"><b>Student Name</b><p>Shatha Alawneh</p></div>
+        <div class="profile-item"><b>Course</b><p>Full-Stack Training</p></div>
+        <div class="profile-item"><b>Track</b><p>Web Development</p></div>
+    </section>
+
+    <div class="hw-grid">
+        <a href="HM1/index.html" class="hw-card">
+            <span class="card-tag">HTML</span>
+            <div class="card-content">
+                <h3>Task 01: Lists</h3>
+                <p>Structured representation of student activities and definitions using various HTML list types.</p>
+            </div>
+            <div class="card-footer"><span>View Project</span> <span class="arrow">→</span></div>
+        </a>
+
+        <a href="HM2/index.html" class="hw-card">
+            <span class="card-tag">TABLES</span>
+            <div class="hw-card-body card-content">
+                <h3>Task 02: Grade Tables</h3>
+                <p>Advanced data representation with complex table structures and marks distribution.</p>
+            </div>
+            <div class="card-footer"><span>View Project</span> <span class="arrow">→</span></div>
+        </a>
+
+        <a href="HM3/index.html" class="hw-card">
+            <span class="card-tag">FORMS</span>
+            <div class="card-content">
+                <h3>Task 03: Registration</h3>
+                <p>Interactive employee registration form with multiple input types and clean validation layout.</p>
+            </div>
+            <div class="card-footer"><span>View Project</span> <span class="arrow">→</span></div>
+        </a>
+
+        <a href="HM4/index.html" class="hw-card">
+            <span class="card-tag">CSS ADV</span>
+            <div class="card-content">
+                <h3>Task 04: Visual Effects</h3>
+                <p>Exploring link hover states, Z-index layers, and custom styling techniques.</p>
+            </div>
+            <div class="card-footer"><span>View Project</span> <span class="arrow">→</span></div>
+        </a>
+
+        <a href="HM5/index.html" class="hw-card">
+            <span class="card-tag">MODERN UI</span>
+            <div class="card-content">
+                <h3>Task 05: Glassmorphism</h3>
+                <p>A high-end login interface utilizing modern transparency and blur effects.</p>
+            </div>
+            <div class="card-footer"><span>View Project</span> <span class="arrow">→</span></div>
+        </a>
+    </div>
+
+    <footer class="footer-note">
+        Built with passion by Shatha Alawneh &copy; 2026
+    </footer>
+</div>
+
+</body>
+</html>
