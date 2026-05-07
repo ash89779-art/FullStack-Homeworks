@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HM4 - Shatha Alawneh</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; line-height: 1.6; }
+        
+        /* Task 1: Link Hover Effect */
+        .task-title { font-weight: bold; margin-top: 20px; margin-bottom: 10px; }
+        .link-box {
+            display: inline-block;
+            border: 2px solid green;
+            padding: 10px 20px;
+            color: green;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .link-box:hover {
+            background-color: white; /* يمكنك تغيير التأثير هنا إذا رغبتِ */
+        }
+
+        /* Task 2: Unordered List with Yellow Background */
+        .yellow-bg-list {
+            background-color: yellow;
+            padding: 15px 40px;
+            display: inline-block;
+            width: 300px;
+            list-style-type: square;
+            font-weight: bold;
+        }
+
+        /* Task 3: Z-Index Heading */
+        .z-index-container {
+            position: relative;
+            margin-top: 50px;
+            height: 200px;
+        }
+        .orange-box {
+            background-color: #ffb347; /* اللون البرتقالي في الصورة */
+            width: 80px;
+            height: 150px;
+            position: absolute;
+            z-index: -1; /* خلف النص */
+            top: 0;
+            left: 0;
+        }
+        .heading-text {
+            font-size: 2.2em;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+        .note {
+            font-size: 0.85em;
+            margin-top: 10px;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="task-title">Task 1: Link Hover Effect</div>
+    <a href="#" class="link-box">This is a link</a>
+    <a href="#" class="link-box">This is a link</a>
+
+    <div class="task-title">Task 2: Unordered List</div>
+    <ul class="yellow-bg-list">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <div class="task-title">Task 3: Z-Index</div>
+    <div class="z-index-container">
+        <div class="orange-box"></div>
+        <div class="heading-text">This is a heading</div>
+        <p class="note">
+            Because the image has a z-index of -1, it will be placed behind the text. <br>
+            <b>Assignment by: Shatha Alawneh</b>
+        </p>
+    </div>
+
+</body>
+</html>
