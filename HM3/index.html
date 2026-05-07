@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM3 - Employee Registration Form</title>
+    <style>
+        /* خلفية مريحة للعين */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* حاوية النموذج */
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d32f2f; /* لون أحمر احترافي */
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        /* تنسيق مربعات الإدخال */
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; /* لضمان عدم خروج المربع عن الحاوية */
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #d32f2f;
+            outline: none;
+        }
+
+        /* تنسيق أزرار الراديو والتشيك بوكس */
+        .inline-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        /* تنسيق الأزرار */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .btn-submit {
+            background-color: #2e7d32; /* أخضر */
+            color: white;
+        }
+
+        .btn-reset {
+            background-color: #757575; /* رمادي */
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Employee Registration</h2>
+    <form>
+        <div class="form-group">
+            <label>Title</label>
+            <div class="inline-group">
+                <label style="font-weight: normal;"><input type="radio" name="title" value="mr"> Mr.</label>
+                <label style="font-weight: normal;"><input type="radio" name="title" value="mrs"> Mrs.</label>
+                <label style="font-weight: normal;"><input type="radio" name="title" value="ms"> Ms.</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter your first name...">
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Enter your last name...">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@company.com">
+        </div>
+
+        <div class="form-group">
+            <label for="state">State</label>
+            <select id="state" name="state">
+                <option value="amman">Amman</option>
+                <option value="zarqa">Zarqa</option>
+                <option value="irbid">Irbid</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Languages Known</label>
+            <div class="inline-group">
+                <label style="font-weight: normal;"><input type="checkbox" name="lang" value="ar"> Arabic</label>
+                <label style="font-weight: normal;"><input type="checkbox" name="lang" value="en"> English</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="info">Additional Information</label>
+            <textarea id="info" name="info" rows="3" placeholder="Anything else?"></textarea>
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Submit Registration" class="btn btn-submit">
+            <input type="reset" value="Reset" class="btn btn-reset">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

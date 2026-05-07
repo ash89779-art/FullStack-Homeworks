@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HM2 - Specification Table</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; padding: 40px; background-color: #f0f4f8; }
+        table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #cbd5e0; padding: 12px; text-align: center; }
+        
+        /* لون رأس الجدول - سماوي هادئ */
+        thead tr:first-child { background-color: #3182ce; color: white; }
+        thead tr:last-child { background-color: #ebf8ff; color: #2c5282; }
+        
+        /* تلوين الصفوف بالتناوب لسهولة القراءة */
+        tbody tr:nth-child(even) { background-color: #f7fafc; }
+        
+        /* تمييز صف المجموع */
+        .total-row { background-color: #edf2f7; font-weight: bold; color: #2d3748; }
+        
+        h2 { text-align: center; color: #2d3748; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Taqi Alden - Specification Table with Hours and Marks</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Unit No.</th>
+                <th rowspan="2">Unit Title</th>
+                <th rowspan="2">Teaching Hours</th>
+                <th colspan="4">Distribution of Theory Marks</th>
+            </tr>
+            <tr>
+                <th>R Level</th>
+                <th>U Level</th>
+                <th>A Level</th>
+                <th>Total Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>I</td><td>Introduction to Internet Technology</td><td>2</td><td>4</td><td>4</td><td>0</td><td>8</td></tr>
+            <tr><td>II</td><td>Basics of HTML & CSS</td><td>6</td><td>0</td><td>2</td><td>6</td><td>8</td></tr>
+            <tr><td>III</td><td>Active Server Pages 3.0</td><td>6</td><td>4</td><td>8</td><td>0</td><td>12</td></tr>
+            <tr><td>IV</td><td>Server Side Coding with VBScript and XML</td><td>8</td><td>2</td><td>4</td><td>8</td><td>14</td></tr>
+            <tr><td>V</td><td>ASP Objects & Components</td><td>10</td><td>4</td><td>4</td><td>6</td><td>14</td></tr>
+            <tr><td>VI</td><td>Accessing database with ASP & ADO</td><td>10</td><td>4</td><td>4</td><td>6</td><td>14</td></tr>
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="2">Total</td>
+                <td>42</td>
+                <td>18</td>
+                <td>26</td>
+                <td>26</td>
+                <td>70</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
